@@ -1,7 +1,7 @@
 import sys  # this allows you to use the sys.exit command to quit/logout of the application
 import os   #allows ping
 
-omgcables = ["omg_bfa1fb.local","omg_4b55bb.local"]  # input IP or localhost name for cables
+omgcables = ["omg_cable1.local","omg_cable2.local"]  # input IP or localhost name for cables
 
 def main():
     menu()
