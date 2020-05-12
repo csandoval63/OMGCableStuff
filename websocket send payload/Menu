@@ -1,0 +1,65 @@
+import sys  # this allows you to use the sys.exit command to quit/logout of the application
+import os   #allows ping
+
+omgcables = ["omg_bfa1fb.local","omg_4b55bb.local"]  # input IP or localhost name for cables
+
+def main():
+    menu()
+
+
+def menu():
+    print("************MAIN MENU**************")
+    # time.sleep(1)
+    print()
+
+    choice = input("""
+                      A: PING CABLES
+                      B: SEND PAYLOAD
+                      C: SEND SCAN COMMAND TO CABLES
+                      Q: Quit/Log Out
+
+                      Please enter your choice: """)
+
+    if choice == "A" or choice == "a":
+        pingcables()
+    elif choice == "B" or choice == "b":
+        sendpayload()
+    elif choice == "Q" or choice == "q":
+        sys.exit
+    else:
+        print("You must only select either A,B, or Q to quit")
+        print("Please try again")
+        menu()
+
+def pingcables():
+    for i in range(len(omgcables)):
+        response = os.system("ping -c 1 " + omgcables[i])
+        #and then check the response...
+        if response == 0:
+            print(omgcables, "ACTIVE CONNECTION ESTABLISHED")
+            pingstatus = "Network Active"
+        else:
+            print(omgcables,"ERROR CONNECTION NOT ESTABLISHED")
+            pingstatus = "Network Error"
+        return pingstatus
+
+        pingstatus = pingcables()
+
+def sendpayload():
+    import websocket
+    print("Module IMported")
+
+    ws = websocket.WebSocket()
+    print("Object stated")
+    for i in range( len( omgcables ) ):
+        ws.connect("ws://{CABLES}/d/ws/issues".format(CABLES=omgcables[i]))
+        print("Connected to websocket")
+        ws.send("FR00720896\t")  # payload 1
+        print("Flash Read Payload")
+        ## HELLO WORLD PAYLOAD
+        ws.send("ce2001010108150201FF0202FF0202FF0203E801021301001201001A01000801001501021601000B01000801000F01000F0100280201FF0202FF0202FF0202FF0202FF0202FF0202FF0203D001020B01020801020F01020F01021201002C01021A01021201021501020F010207300101\t")
+        print("Send Payload")
+        ws.close()
+        print("close websocket")
+
+main()
