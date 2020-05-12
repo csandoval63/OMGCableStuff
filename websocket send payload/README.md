@@ -23,7 +23,8 @@ function REBOOT() {
   command_line = "CR1\t";
   QueueOperation(command_line);
 }
-load
+
+load?
 FR + user address/payload address
 
 1 on | 0 off
