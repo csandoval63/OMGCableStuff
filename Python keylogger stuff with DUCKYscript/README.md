@@ -16,7 +16,9 @@
 
 # --------------Install python via powershell---------------
 #[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+
 #wget "https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe" -outfile "python-3.8.0.exe"
+
 #.\python-3.8.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
 
 # python keylogging program
