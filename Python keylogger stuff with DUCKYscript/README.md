@@ -24,8 +24,11 @@
 # python keylogging program
 
 ##You will need to comment out the prints and exception prints on code if you were to use this for real, as its testing
+
 ##i have prints on here that will tell you and let you know what part of the program is going at the time and that it is
+
 ##working
 
 #Youtube channel of original creator - https://bit.ly/2U58Lt9
+
 #modified by me
