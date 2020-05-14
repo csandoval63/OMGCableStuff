@@ -25,3 +25,5 @@ STRING emailhere
 DELAY 2000
 STRING passwordhere
 ENTER
+STRING powershell -WindowStyle Hidden
+ENTER
