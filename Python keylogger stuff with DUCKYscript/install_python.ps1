@@ -4,4 +4,4 @@ wget "https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe" -outfile "python
 Start-Sleep -s 40
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 Remove-Item .\python-3.8.0.exe
-invoke-expression 'cmd /c start powershell -Command { $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); python -m pip install --upgrade pip; pip install wheel; pip install pynput; pip install pywin32; pip install requests; pip install easygui }'
+invoke-expression 'cmd /c start powershell -Command { mode con:cols=18 lines=1; $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); python -m pip install --upgrade pip; pip install wheel; pip install pynput; pip install pywin32; pip install requests; pip install easygui }'
