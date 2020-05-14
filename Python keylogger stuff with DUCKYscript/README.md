@@ -10,7 +10,7 @@
 
 #pip install easygui
 
-#run powershell >  pythonw "C:\Users\mrgig\Desktop\OMG CABLE STUFF\python keylogger test.py"
+#run powershell >  pythonw "C:\Path\Path\Path\OMG CABLE STUFF\python keylogger test.py"
 
 #powershell -WindowStyle Hidden
 
