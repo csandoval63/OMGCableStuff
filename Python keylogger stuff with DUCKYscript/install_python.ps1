@@ -5,4 +5,4 @@ $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";"
 Start-Sleep -Seconds 40
 Remove-Item C:\Users\Public\python-3.8.0.exe
 Remove-Item .\install_python.ps1
-invoke-expression 'cmd /c start powershell -Command { Start-Sleep -Seconds 20; $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); python -m pip install --upgrade pip; pip install wheel; pip install pynput; pip install pywin32; pip install requests; pip install easygui }
+invoke-expression 'cmd /c start powershell -Command { Start-Sleep -Seconds 20; $env:Path = [System.Environment]::GetEnvironmentVariable("Path","Machine") + ";" + [System.Environment]::GetEnvironmentVariable("Path","User"); python -m pip install --upgrade pip; pip install wheel; pip install pynput; pip install pywin32; pip install requests; pip install easygui }'
