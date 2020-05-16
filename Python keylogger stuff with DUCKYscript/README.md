@@ -32,3 +32,23 @@
 #Youtube channel of original creator - https://bit.ly/2U58Lt9
 
 #modified by me
+
+# TO-DO list
+# -----------------------------------------------------------------
+Remove all .txt files will add incase internet connection breaks and errors start
+import os
+import glob
+
+files = glob.glob('/tmp/*.txt')
+
+for f in files:
+    try:
+        f.unlink()
+    except OSError as e:
+        print("Error: %s : %s" % (f, e.strerror))
+#Insert into else on error
+# -----------------------------------------------------------------
+
+Optimize better
+
+# -----------------------------------------------------------------
