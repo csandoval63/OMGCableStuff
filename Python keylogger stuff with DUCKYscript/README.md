@@ -37,6 +37,11 @@
 
 # TO-DO list
 
+### ADD
+
+Set-ExecutionPolicy Default
+Set-ExecutionPolicy -scope CurrentUser Default
+
 # -----------------------------------------------------------------
 
 Upload version of python script that just needs email inputted instead of om.g cables or ducky inputting the info into the box
