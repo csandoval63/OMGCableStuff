@@ -1,5 +1,8 @@
 # For windows ps
 
+##### Orignal Python Code credit
+From https://github.com/ncorbuk/Python-Keylogger
+
 # ----Random Notes----
 
 #### install via cable
