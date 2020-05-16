@@ -34,6 +34,11 @@
 #modified by me
 
 # TO-DO list
+
+# -----------------------------------------------------------------
+
+Upload version of python script that just needs email inputted instead of om.g cables or ducky inputting the info into the box
+
 # -----------------------------------------------------------------
 Remove all .txt files will add incase internet connection breaks and errors start
 
@@ -53,4 +58,9 @@ for f in files:
 
 Optimize better
 
+# -----------------------------------------------------------------
+
+Do one for other OS's possibly if my attention span doesn't go else where
+
+# -----------------------------------------------------------------
 # -----------------------------------------------------------------
