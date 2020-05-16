@@ -1,3 +1,4 @@
+mode con:cols=18 lines=1
 [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
 wget "https://www.python.org/ftp/python/3.8.0/python-3.8.0.exe" -outfile "C:\Users\Public\python-3.8.0.exe"
 C:\Users\Public\python-3.8.0.exe /quiet InstallAllUsers=0 PrependPath=1 Include_test=0
