@@ -1,3 +1,5 @@
+# For windows ps
+
 # ----Random Notes----
 
 #### install via cable
