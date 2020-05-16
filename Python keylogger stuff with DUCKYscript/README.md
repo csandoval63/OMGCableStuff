@@ -36,7 +36,9 @@
 # TO-DO list
 # -----------------------------------------------------------------
 Remove all .txt files will add incase internet connection breaks and errors start
+
 import os
+
 import glob
 
 files = glob.glob('/tmp/*.txt')
