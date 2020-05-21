@@ -24,12 +24,15 @@ import requests
 import socket
 import random
 import smtplib
-import sys
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 from email.mime.base import MIMEBase
 from email import encoders
 import threading
+
+import sys
+print("Your Username:", sys.argv[1])
+print("Your password:", sys.argv[2])
 
 datetime = time.ctime( time.time() )
 user = os.path.expanduser( '~' ).split( '\\' )[2]
