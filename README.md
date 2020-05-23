@@ -1,2 +1,2 @@
 # OMGCableStuff
-stuff where i keep my omg stuff
+stuff where i keep my OM.G Payloads and Notes, Etc...
